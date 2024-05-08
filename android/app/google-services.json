@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1058933086324",
+    "project_id": "naukri-507",
+    "storage_bucket": "naukri-507.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058933086324:android:6b01094a55f1b2a5b31921",
+        "android_client_info": {
+          "package_name": "com.example.deals_draw_ecommerceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiMmIo5y8wsKoWNRu484Yh5C_fSghlaiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
