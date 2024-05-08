@@ -1,9 +1,8 @@
 
 
 import 'package:deals_draw_ecommerceapp/view_model/widgets/pageview.dart';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,6 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int pageIndex=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,19 +66,19 @@ class _HomeState extends State<Home> {
               thickness: 2.5,
             ),
               const SizedBox(height: 10,),
-               Expanded(child: PageViews())
+             const  Expanded(child: PageViews())
              
           ],
         )
       )),
 
       floatingActionButton: Container(
-        margin: EdgeInsets.only(bottom: 50),
+        margin:const EdgeInsets.only(bottom: 10),
         height: 60,
         width: 120,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        color: Color.fromARGB(255, 211, 57, 46)
+        color:const Color.fromARGB(255, 211, 57, 46)
       ),
       child: Center(
         child: Row(
@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
           width: 40,
           child: Image.network('https://icons.veryicon.com/png/o/miscellaneous/jinfeng-information-technology/chat-118.png',color: Colors.white,),
           ),
-          Text('Chat',
+         const Text('Chat',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
@@ -101,6 +101,117 @@ class _HomeState extends State<Home> {
         ),
       ),
       ),
+      bottomNavigationBar: NavBar(context),
     );
+    
   }
-}
+   Container NavBar(BuildContext context) { 
+    return Container( 
+      height: 60, 
+      decoration: const BoxDecoration( 
+        color: Colors.white, 
+       
+      ), 
+      child: Row( 
+        mainAxisAlignment: MainAxisAlignment.spaceAround, 
+        children: [ 
+          IconButton( 
+            enableFeedback: false, 
+            onPressed: () { 
+              setState(() { 
+                pageIndex = 0; 
+              }); 
+            }, 
+            icon: pageIndex == 0 
+                ? const Icon( 
+                    Icons.home_filled, 
+                    color: Colors.red, 
+                    size: 35, 
+                  ) 
+                : const Icon( 
+                    Icons.home_outlined, 
+                    color: Colors.grey, 
+                    size: 35, 
+                  ), 
+          ), 
+          IconButton( 
+            enableFeedback: false, 
+            onPressed: () { 
+              setState(() { 
+                pageIndex = 1; 
+              }); 
+            }, 
+            icon: pageIndex == 1 
+                ? const Icon( 
+                    Icons.widgets_sharp, 
+                    color: Colors.red, 
+                    size: 35, 
+                  ) 
+                : const Icon( 
+                    Icons.widgets_rounded, 
+                    color: Colors.grey, 
+                    size: 35, 
+                  ), 
+          ), 
+          IconButton( 
+            enableFeedback: false, 
+            onPressed: () { 
+              setState(() { 
+                pageIndex = 2; 
+              }); 
+            }, 
+            icon: pageIndex == 2 
+                ? const Icon( 
+                    Icons.dehaze, 
+                    color: Colors.red, 
+                    size: 35, 
+                  ) 
+                : const Icon( 
+                    Icons.dehaze, 
+                    color: Colors.grey, 
+                    size: 35, 
+                  ), 
+          ), 
+          IconButton( 
+            enableFeedback: false, 
+            onPressed: () { 
+              setState(() { 
+                pageIndex = 3; 
+              }); 
+            }, 
+            icon: pageIndex == 3 
+                ? const Icon( 
+                    Icons.shopping_cart, 
+                    color: Colors.red, 
+                    size: 35, 
+                  ) 
+                : const Icon( 
+                    Icons.add_shopping_cart_outlined, 
+                    color: Colors.grey, 
+                    size: 35, 
+                  ), 
+          ), 
+            IconButton( 
+            enableFeedback: false, 
+            onPressed: () { 
+              setState(() { 
+                pageIndex = 4; 
+              }); 
+            }, 
+            icon: pageIndex == 4 
+                ? const Icon( 
+                    Icons.person, 
+                    color: Colors.red, 
+                    size: 35, 
+                  ) 
+                : const Icon( 
+                    Icons.person_outline, 
+                    color: Colors.grey, 
+                    size: 35, 
+                  ), 
+          ), 
+        ], 
+      ), 
+    ); 
+  } 
+} 

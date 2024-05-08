@@ -1,7 +1,7 @@
 
 
 import 'package:deals_draw_ecommerceapp/firebase_options.dart';
-import 'package:deals_draw_ecommerceapp/view/screens/login_screen.dart';
+import 'package:deals_draw_ecommerceapp/view/screens/splashscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
      
       
       ),
-      home:const LoginScreen(),
+      home:const SplashScreen(),
       
     );
   }
